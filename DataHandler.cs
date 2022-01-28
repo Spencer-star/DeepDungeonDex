@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace DeepDungeonDex
 {
@@ -50,19 +50,19 @@ namespace DeepDungeonDex
         private static readonly Dictionary<uint, MobData> mobs = new Dictionary<uint, MobData>()
             {
 				// HoH floors 1-9
-                { 7262, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="Auto inflicts Heavy debuff" } },
-                { 7263, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="Auto applies Physical Vuln Up every 10s" } },
-                { 7264, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="AoE applies Paralysis" } },
-                { 7265, new MobData { Threat=MobData.ThreatLevel.Dangerous, Aggro=MobData.AggroType.Proximity, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="Triple auto inflicts Bleed" } },
-                { 7266, new MobData { Threat=MobData.ThreatLevel.Caution, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="Untelegraphed Sleep followed by AoE" } },
-                { 7267, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = false}, MobNotes="AoE applies Bleed" } },
-                { 7268, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="Gaze" } },
-                { 7269, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Proximity, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="" } },
-                { 7270, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="AoE inflicts knockback" } },
-                { 7271, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="Conal AoE inflicts Bleed\nCircle AoE inflicts knockback" } },
-                { 7272, new MobData { Threat=MobData.ThreatLevel.Dangerous, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="Unavoidable tankbuster-like \"Jaws\"" } },
-                { 7273, new MobData { Threat=MobData.ThreatLevel.Caution, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="Untelegraphed buster inflicts Bleed and knockback" } },
-                { 7274, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="" } },
+                { 7262, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="普攻附加DOT" } },
+                { 7263, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="每10秒进行一次攻击" } },
+                { 7264, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="AOE附加麻痹" } },
+                { 7265, new MobData { Threat=MobData.ThreatLevel.Dangerous, Aggro=MobData.AggroType.Proximity, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="死刑附加流血" } },
+                { 7266, new MobData { Threat=MobData.ThreatLevel.Caution, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="无读条睡眠，然后钢铁" } },
+                { 7267, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = false}, MobNotes="AOE附加出血" } },
+                { 7268, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="背对" } },
+                { 7269, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Proximity, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="暂无" } },
+                { 7270, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="AoE造成击退" } },
+                { 7271, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="AOE附加流血\n钢铁击中后击退玩家" } },
+                { 7272, new MobData { Threat=MobData.ThreatLevel.Dangerous, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="无读条对T死刑 \"Jaws\"" } },
+                { 7273, new MobData { Threat=MobData.ThreatLevel.Caution, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="击退和流血" } },
+                { 7274, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="暂无2" } },
 				// HoH floors 11-19
                 { 7275, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="" } },
                 { 7276, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Proximity, Vuln = new MobData.Vulnerabilities{CanStun = true}, MobNotes="" } },
@@ -232,7 +232,7 @@ namespace DeepDungeonDex
                 { 4996, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Proximity, Vuln = new MobData.Vulnerabilities{CanStun = true, CanBind = false, CanHeavy = false, CanSleep = false, IsUndead = false}, MobNotes="Buffs own damage" } },
                 { 4997, new MobData { Threat=MobData.ThreatLevel.Dangerous, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true, CanBind = false, CanHeavy = false, CanSleep = true, IsUndead = false}, MobNotes="Gaze attack inflicts Petrify, \"Devour\" instantly kills players inflicted with Toad" } },
                 { 4998, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = false, CanBind = true, CanHeavy = true, CanSleep = false, IsUndead = false}, MobNotes="" } },
-                { 4999, new MobData { Threat=MobData.ThreatLevel.Caution, Aggro=MobData.AggroType.Boss, Vuln = new MobData.Vulnerabilities{CanStun = false, CanBind = false, CanHeavy = false, CanSleep = false, IsUndead = false, CanSlow = false}, MobNotes="1) \"Bloody Caress\" - high damage cleave\n2) Two telegraphed AOEs and a roomwide AOE\n3) Summons two hornets that must be killed before they \"Final Sting\"\n4) \"Rotten Stench\" - high damage line AOE" } },
+                { 4999, new MobData { Threat=MobData.ThreatLevel.Caution, Aggro=MobData.AggroType.Boss, Vuln = new MobData.Vulnerabilities{CanStun = false, CanBind = false, CanHeavy = false, CanSleep = false, IsUndead = false, CanSlow = false}, MobNotes="1) \"血腥抚摸\" - high damage cleave\n2) Two telegraphed AOEs and a roomwide AOE\n3) Summons two hornets that must be killed before they \"Final Sting\"\n4) \"Rotten Stench\" - high damage line AOE" } },
                 //PotD 21-30
                 { 5000, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true, CanBind = true, CanHeavy = true, CanSleep = true, IsUndead = false}, MobNotes="" } },
                 { 5001, new MobData { Threat=MobData.ThreatLevel.Easy, Aggro=MobData.AggroType.Sight, Vuln = new MobData.Vulnerabilities{CanStun = true, CanBind = true, CanHeavy = true, CanSleep = true, IsUndead = false}, MobNotes="" } },
